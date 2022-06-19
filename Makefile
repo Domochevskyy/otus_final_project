@@ -10,7 +10,7 @@ up_opencart:
 	LOCAL_IP=$(hostname -I | grep -o "^[0-9.]*")	\
 	docker-compose up  -d
 
-build: up_opencart
+build:
 	docker build --tag $(IMAGE_NAME) .
 
 tests: build
