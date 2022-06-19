@@ -1,0 +1,11 @@
+.idea/
+.pytest_cache/
+.gitignore
+.git/
+docker-compose.yml
+README.md
+README.MD
+__pycache__/
+venv/
+allure-report/
+allure-results/
