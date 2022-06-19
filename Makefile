@@ -15,11 +15,11 @@ build:
 
 tests: build
 	docker run --name $(CONTAINER_NAME) \
-			   -v $(CURDIR)/allure-results:/app/allure-results \
 			   --network selenoid \
 			   --privileged	\
-			   --rm \
 			   $(IMAGE_NAME) pytest $(PYTEST_OPTIONS) $(TESTS_DIR)
+	docker cp $(CONTAINER_NAME):/app/allure-results .
+	docker rm $(CONTAINER_NAME)
 
 allure:
 	allure generate --clean && allure open
