@@ -1,5 +1,5 @@
 TESTS_DIR ?= /app/tests
-PYTEST_OPTIONS ?= --color=no --setup-show
+PYTEST_OPTIONS ?= --color=no --setup-show --alluredir=allure-results
 IMAGE_NAME ?= opencart_tests_image
 CONTAINER_NAME ?= opencart_tests_container
 
